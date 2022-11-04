@@ -1367,13 +1367,21 @@ h2{
   justify-items: stretch;
 }
 
-.gap-y-10 {
-  row-gap: 2.5rem;
-}
-
 .gap-x-6 {
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
+}
+
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1884,6 +1892,11 @@ h2{
      object-fit: scale-down;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .pt-14 {
   padding-top: 3.5rem;
 }
@@ -1894,10 +1907,6 @@ h2{
 
 .pb-28 {
   padding-bottom: 7rem;
-}
-
-.pb-36 {
-  padding-bottom: 9rem;
 }
 
 .pt-16 {
@@ -1973,14 +1982,19 @@ h2{
   line-height: 2.5rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -2403,6 +2417,10 @@ h2{
   width: 3rem;
 }
 
+.icon:hover {
+  opacity: 0.75;
+}
+
 @media (min-width: 640px) {
   .icon {
     height: auto;
@@ -2548,6 +2566,12 @@ h2{
     flex-wrap: nowrap;
   }
 
+  .sm\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .sm\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -2555,6 +2579,10 @@ h2{
 
   .sm\:pb-40 {
     padding-bottom: 10rem;
+  }
+
+  .sm\:pb-36 {
+    padding-bottom: 9rem;
   }
 
   .sm\:text-\[80px\] {
@@ -2565,14 +2593,14 @@ h2{
     font-size: 64px;
   }
 
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .sm\:underline {
@@ -2592,5 +2620,12 @@ h2{
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
       paint-order: markers;
     }
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

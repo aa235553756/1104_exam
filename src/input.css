@@ -15,7 +15,7 @@
 
 @layer utilities{
     .icon{
-        @apply w-12 h-12 sm:w-auto sm:h-auto;
+        @apply w-12 h-12 sm:w-auto sm:h-auto hover:opacity-75;
     }
     .lh-base{
         line-height: 1.3125;
