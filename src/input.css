@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        font-family: 'Roboto', sans-serif;
+        @apply sm:text-2xl text-lg leading-normal;
+        /* 手機版決定16px or 18px */
+    }
+    h2{
+        line-height: 1.3125;
+    }
+}
+
+@layer utilities{
+    .icon{
+        @apply w-12 h-12 sm:w-auto sm:h-auto;
+    }
+    .lh-base{
+        line-height: 1.3125;
+    }
+}
