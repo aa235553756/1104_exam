@@ -1892,11 +1892,6 @@ h2{
      object-fit: scale-down;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .pt-14 {
   padding-top: 3.5rem;
 }
@@ -2605,13 +2600,6 @@ h2{
 
   .sm\:underline {
     text-decoration-line: underline;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 }
 
